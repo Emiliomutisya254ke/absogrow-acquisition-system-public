@@ -1,0 +1,11 @@
+-- =====================================================================
+-- Absogrow AI - Business Acquisition System
+-- Migration 0004: an "expired" status for notifications
+--
+-- An alert that was never delivered and is no longer worth sending (the
+-- draft it announced has been decided, or it is days old) is marked
+-- "expired" so it is not confused with a delivery failure.
+-- Kept in its own migration because a new enum value cannot be used in
+-- the transaction that adds it.
+-- =====================================================================
+alter type public.notification_status add value if not exists 'expired';
