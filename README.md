@@ -27,6 +27,7 @@ Pilot results (no names) are in [docs/results-summary.md](docs/results-summary.m
 
 ```
 README.md
+skill/local-business-lead-audit/   general version packaged as an agent skill
 docs/
   architecture.md          components and data flow (with diagram)
   security-and-data-protection.md
@@ -40,6 +41,12 @@ supabase/
   functions/telegram-notify/index.ts
 .env.example               names of the secrets the system needs (no values)
 ```
+
+## Run it as an agent skill
+
+`skill/local-business-lead-audit/` is a general version of this system packaged as a SKILL.md skill for AI agents (Claude Code, Cursor, Codex). It works for any city and sector, contains no lead data, and never sends email by itself.
+
+To try it in Claude Code, copy the folder into `~/.claude/skills/` and ask for, say, "10 dental clinics in Machakos".
 
 ## Setting up a database from this repo
 
